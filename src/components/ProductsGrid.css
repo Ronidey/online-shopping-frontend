@@ -1,0 +1,12 @@
+.ProductsGrid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  gap: 2rem;
+}

@@ -1,0 +1,23 @@
+.ProductsSection {
+  padding: 5rem 0;
+}
+
+.ProductsSection.collection {
+  padding-top: 7rem;
+}
+
+.ProductsSection.best-selling {
+  padding-bottom: 7rem;
+}
+
+.ProductsSection__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.ProductsSection__header h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #333;
+  color: var(--clr-primary);
+  font-family: serif;
+}

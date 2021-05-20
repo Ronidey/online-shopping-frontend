@@ -1,0 +1,49 @@
+.Logo {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--clr-primary);
+  display: flex;
+  align-items: center;
+}
+
+.Logo__text {
+  display: none;
+  font-size: 1.5em;
+}
+
+@media (min-width: 600px) {
+  .Logo__text {
+    display: inline-block;
+  }
+}
+
+.Logo__icon {
+  margin-left: 0.5rem;
+  transform-origin: top center;
+  font-size: 1.75em;
+  animation: logoIconAnimate 5s ease-in-out infinite;
+}
+
+@keyframes logoIconAnimate {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(10deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+}

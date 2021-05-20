@@ -1,0 +1,21 @@
+.CategoriesNav {
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+.CategoriesNav > * + * {
+  margin-left: 1.5rem;
+}
+.CategoriesNav__link {
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  color: orange;
+  font-weight: 500;
+  font-family: 'Montserrat';
+  font-family: var(--ff-secondary);
+  border-radius: 100vh;
+}
+.CategoriesNav__link.is-active {
+  background: orange;
+  color: #fff;
+}

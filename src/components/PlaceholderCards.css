@@ -1,0 +1,19 @@
+.PlaceholderCard {
+  background: #ececec;
+  -webkit-box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+  box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+  height: 240px;
+  opacity: 0.8;
+  -webkit-animation: fade-in-out 3s ease-in-out infinite;
+  animation: fade-in-out 3s ease-in-out infinite;
+}
+@-webkit-keyframes fade-in-out {
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes fade-in-out {
+  50% {
+    opacity: 0.5;
+  }
+}

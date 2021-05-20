@@ -1,0 +1,57 @@
+.ProductCardWrapper-enter {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+.ProductCardWrapper-enter-active {
+  transform: none;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.ProductCard {
+  position: relative;
+}
+.ProductCard__img {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  text-align: center;
+}
+
+.ProductCard__info {
+  padding: 0.5rem 1.15rem;
+  text-align: center;
+}
+.ProductCard__info .title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.ProductCard__info .price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  color: var(--clr-dark-light);
+}
+.ProductCard__info .price--del {
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+.ProductCard__info .discount {
+  margin-left: 0.25rem;
+  color: #009c00;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.ProductCard .btn-add-wishlist {
+  opacity: 0;
+}
+
+.ProductCard:focus .btn-add-wishlist,
+.ProductCard:hover .btn-add-wishlist {
+  opacity: 1;
+}

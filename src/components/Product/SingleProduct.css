@@ -1,0 +1,116 @@
+.product {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.product__view button + button {
+  margin-left: 0.5rem;
+}
+
+.product__info {
+  margin-top: 4rem;
+  color: #111;
+  color: var(--clr-dark);
+}
+.product__info > * + * {
+  margin-top: 2rem;
+}
+.product__info .product-ratings,
+.product__info .product-price {
+  margin-top: 1rem;
+}
+.product__info .product-details {
+  margin-top: 4rem;
+}
+.product__info__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+@media screen and (min-width: 900px) {
+  .product__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .product__container .product__view {
+    width: 50%;
+  }
+  .product__container .product__info {
+    width: 50%;
+    padding-left: 2rem;
+    margin-top: 0;
+  }
+}
+
+.product-ratings .stars {
+  display: inline-block;
+  background: #009c00;
+  background: var(--clr-green);
+  color: #fff;
+  padding: 0.08rem 0.55rem;
+  border-radius: 100vh;
+}
+.product-ratings .stars svg {
+  margin-bottom: -2px;
+}
+.product-ratings .ratings-count {
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.product-price > * + * {
+  margin-left: 0.5rem;
+}
+.product-price .price--cur {
+  font-size: 2rem;
+}
+.product-price .price--del {
+  font-size: 0.95rem;
+  color: #999;
+  text-decoration: line-through;
+}
+.product-price .offer {
+  color: #009c00;
+  color: var(--clr-green);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-offers h4 {
+  font-size: 1.05rem;
+}
+.product-offers p {
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.product-sizes {
+  cursor: default;
+  margin-top: 2rem;
+}
+.product-sizes h6 {
+  color: #666;
+  margin-right: 2rem;
+}
+.product-sizes span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.product-sizes span + span {
+  margin-left: 0.5rem;
+}
+.product-sizes span.is-active {
+  background: coral;
+  color: #fff;
+  border-color: coral;
+}

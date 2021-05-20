@@ -1,0 +1,85 @@
+.product-img-group {
+  margin-bottom: 2.5rem;
+}
+
+.product-img-lg {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+.product-img-lg img {
+  width: auto;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.product-img-lg.is-wide img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.product-img-lg .btn-add-wishlist {
+  top: 1rem;
+  right: 1rem;
+}
+
+.window-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.window-images div {
+  width: 80px;
+  height: 80px;
+  border: 3px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.window-images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.window-images div.is-active {
+  border-color: #2f34a2;
+}
+.window-images div + div {
+  margin-left: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+  .product-img-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .window-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+  }
+  .window-images div + div {
+    margin: 1rem 0 0;
+  }
+}

@@ -1,13 +1,365 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --clr-primary: #6e82f7;
+  --clr-dark: #111;
+  --clr-dark-light: #333;
+  --clr-light: #efefef;
+  --clr-green: #009c00;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  line-height: 1.5;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  -webkit-filter: brightness(0.7);
+  filter: brightness(0.7);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-family: 'Montserrat';
+  font-family: var(--ff-secondary);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-family: 'Roboto';
+  font-family: var(--ff-primary);
+}
+
+input:not([type='checkbox']) {
+  display: block;
+  padding: 0.8rem 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #aaa;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+}
+
+input:invalid {
+  border-color: #ef5555;
+}
+
+label {
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end !important;
+  -ms-flex-pack: end !important;
+  justify-content: flex-end !important;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap !important;
+  flex-wrap: wrap !important;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.align-items-start {
+  -webkit-box-align: start !important;
+  -ms-flex-align: start !important;
+  align-items: flex-start !important;
+}
+
+.align-items-center {
+  -webkit-box-align: center !important;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.align-items-end {
+  -webkit-box-align: end !important;
+  -ms-flex-align: end !important;
+  align-items: flex-end !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.ml-sm {
+  margin-left: 0.5rem !important;
+}
+.ml-md {
+  margin-left: 1rem !important;
+}
+.ml-lg {
+  margin-left: 2rem !important;
+}
+.mr-sm {
+  margin-right: 0.5rem !important;
+}
+.mr-md {
+  margin-right: 1rem !important;
+}
+.mr-lg {
+  margin-right: 2rem !important;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+.text-danger {
+  color: red !important;
+}
+
+#root:not(:empty) + .loader {
+  display: none;
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.my-wishlist,
+.my-cart {
+  padding: 4rem 1rem;
+}
+.my-wishlist__container,
+.my-cart__container {
+  max-width: 1000px;
+  margin: auto;
+}
+.my-wishlist header,
+.my-cart header {
+  margin-bottom: 3.5rem;
+}
+.my-wishlist header h2,
+.my-cart header h2 {
+  font-weight: 400;
+}
+
+.my-cart footer {
+  margin-top: 6rem;
+}
+.my-cart footer h3 {
+  font-size: 1.5rem;
+  font-family: 'Roboto';
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.my-cart footer .badge {
+  margin: 0.5rem 0;
+}
+
+.search-results {
+  padding: 4rem 0;
+}
+
+.search-results__heading {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* ------------- Img Feedback -------------- */
+.img-notify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  padding: calc(4rem + 72px) 0 4rem;
+  margin-top: -72px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.img-notify.cart {
+  --clr: #f37256;
+}
+
+.img-notify.wishlist {
+  --clr: #f097ff;
+}
+
+.img-notify.checkout-success {
+  --clr: #3ad449;
+}
+
+.img-notify__btn-dark {
+  --clr: #444;
+}
+
+.img-notify__img {
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.img-notify__img,
+.img-notify__text {
+  text-align: center;
+}
+
+.img-notify h1 {
+  color: var(--clr);
+}
+
+.img-notify__btn {
+  background: var(--clr);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  -webkit-transition: -webkit-filter 250ms ease;
+  transition: -webkit-filter 250ms ease;
+  -o-transition: filter 250ms ease;
+  transition: filter 250ms ease;
+  transition: filter 250ms ease, -webkit-filter 250ms ease;
+}
+
+.img-notify__btn:hover,
+.img-notify__btn:focus {
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
+}
+
+@media screen and (min-width: 900px) {
+  .img-notify {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .img-notify__img {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .img-notify__text {
+    text-align: left;
+  }
 }

@@ -1,0 +1,84 @@
+.search-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  -webkit-transform: translateY(-105%);
+  -ms-transform: translateY(-105%);
+  transform: translateY(-105%);
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease-in-out,
+    -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -o-transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out,
+    -webkit-transform 250ms ease-in-out;
+}
+.search-box__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+.search-box__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.search-box .form-search {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search-box .form-search input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  border-bottom: 2px solid #999;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.search-box .form-search input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.search-box .form-search input::-moz-placeholder {
+  color: #ccc;
+}
+.search-box .form-search input:-ms-input-placeholder {
+  color: #ccc;
+}
+.search-box .form-search input::-ms-input-placeholder {
+  color: #ccc;
+}
+.search-box .form-search input::placeholder {
+  color: #ccc;
+}
+.search-box .form-search button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.search-box.is-open {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+}
