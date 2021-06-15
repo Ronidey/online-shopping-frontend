@@ -1,13 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
 import AppContext from '../../AppContext';
 import axios from 'axios';
-import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
 import Page from '../Page';
 import MainHeader from '../MainHeader';
 import Search from '../Search';
 import Loader from '../Loader';
-import './Cart.css';
 import Checkout from './Checkout';
 import { deleteCartItem } from '../../requests';
 import SelectedItem from '../SelectedItem';
@@ -100,16 +98,6 @@ function Cart() {
               <header className='text-center'>
                 <h2>My Cart</h2>
               </header>
-              {/* {myCart.map((itemObj) => {
-                return (
-                  <CartItem
-                    key={itemObj._id}
-                    {...itemObj}
-                    deleteFromCart={deleteFromCart}
-                    changeItemQty={changeItemQty}
-                  />
-                );
-              })} */}
               {myCart.map((item) => {
                 return (
                   <SelectedItem

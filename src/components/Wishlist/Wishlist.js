@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import WishlistItem from './WishlistItem';
 import AppContext from '../../AppContext';
 import EmptyWishlist from './EmptyWishlist';
 import MainHeader from '../MainHeader';
@@ -7,7 +6,6 @@ import Page from '../Page';
 import Search from '../Search';
 import axios from 'axios';
 import Loader from '../Loader';
-import './Wishlist.css';
 import SelectedItem from '../SelectedItem';
 
 function Wishlist() {
